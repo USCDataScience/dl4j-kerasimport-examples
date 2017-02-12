@@ -36,12 +36,12 @@ for (String imageFile: imagesDir.list((dir, name) -> name.endsWith(".jpg"))) {
 
 #### Sample output:
 ```
-2017-02-11 18:07:36 INFO  KerasInceptionV3Net:58 - Time taken to import model 4347 ms
-ak47.jpg:: 1099ms ::: [Label(413, 0.8965, assault_rifle)]
-cat1.jpg:: 785ms ::: [Label(278, 0.2900, kit_fox), Label(279, 0.0584, Arctic_fox), Label(280, 0.0811, grey_fox)]
-cat2.jpg:: 842ms ::: [Label(281, 0.1530, tabby), Label(285, 0.3412, Egyptian_cat), Label(834, 0.0524, suit)]
-german_shepherd_dog.jpg:: 769ms ::: [Label(225, 0.3057, malinois), Label(235, 0.5327, German_shepherd)]
-handgun.jpg:: 939ms ::: [Label(413, 0.3358, assault_rifle), Label(763, 0.5338, revolver), Label(764, 0.0724, rifle)]
+2017-02-11 19:10:56 INFO  KerasInceptionV3Net:55 - Time taken to import model 4514 ms
+ak47.jpg:: 1225ms ::: [Label(413, 0.8965, assault_rifle)]
+cat1.jpg:: 807ms ::: [Label(278, 0.2900, kit_fox), Label(280, 0.0811, grey_fox), Label(279, 0.0584, Arctic_fox)]
+cat2.jpg:: 909ms ::: [Label(285, 0.3412, Egyptian_cat), Label(281, 0.1530, tabby), Label(834, 0.0524, suit)]
+german_shepherd_dog.jpg:: 839ms ::: [Label(235, 0.5327, German_shepherd), Label(225, 0.3057, malinois)]
+handgun.jpg:: 852ms ::: [Label(763, 0.5338, revolver), Label(413, 0.3358, assault_rifle), Label(764, 0.0724, rifle)]
 ```
 
 

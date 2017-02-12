@@ -1,0 +1,3 @@
+[submodule "deep-learning-models"]
+	path = deep-learning-models
+	url = https://github.com/fchollet/deep-learning-models

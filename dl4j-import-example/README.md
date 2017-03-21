@@ -6,14 +6,12 @@ The (first) example used here is InceptionV3 network trained on ImageNet dataset
  
  
 ## Build instructions
-+ As of February 11, 2017, the examples in this code are based on snapshots of deeplearning4j, ND4j and Datavec which 
-  were built from source code.
-+ deeplearning4j version  0.7.3 is required. since it is not released (at the time of writing), it was built and installed from source repo
-+ deeplearning4j requires ND4j and DataVec, with the same matching versions => build and install them from source
++ Using maven : `mvn clean compile`
 
 
 ## Example Usage
-Import this maven project into your IDE and run the `main` method inside `KerasInceptionV3Net`.
++ Import this maven project into your IDE and run the `main` method inside `KerasInceptionV3Net`.
++ or from CLI: `mvn compile exec:java -Dexec.mainClass="edu.usc.irds.dl.dl4j.examples.KerasInceptionV3Net"`
  
 #### Sample Code:
 ```java

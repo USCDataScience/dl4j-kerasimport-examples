@@ -48,9 +48,9 @@ public class KerasInceptionV3Net {
 
     public KerasInceptionV3Net(String modelJsonPath, String weightsH5Path) throws
             UnsupportedKerasConfigurationException, IOException, InvalidKerasConfigurationException {
-        long st = System.currentTimeMillis();
         LOG.info("Importing Inception model from {}", modelJsonPath);
         LOG.info("Importing Weights model from {}", weightsH5Path);
+        long st = System.currentTimeMillis();
         this.graph = KerasModelImport.importKerasModelAndWeights(modelJsonPath, weightsH5Path, false);
         LOG.info("Time taken to import model {} ms", (System.currentTimeMillis() - st));
     }

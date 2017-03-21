@@ -57,8 +57,8 @@ handgun.jpg:: 852ms ::: [Label(763, 0.5338, revolver), Label(413, 0.3358, assaul
 The credits goes to these awesome people:
 
 + Developers of **Deeplearning4j**
-  + Whoever worked on Keras Import model features and its documentation at https://deeplearning4j.org/model-import-keras 
-  + **Samuel Audet @saudet** for answering my build questions on their gitter channel at https://gitter.im/deeplearning4j/deeplearning4j
+  + **Dave kale(turambar)** and **Susan Eraly(eraly)** for their work on Keras Import model features and its documentation at https://deeplearning4j.org/model-import-keras 
+  + **Samuel Audet @saudet ** for answering my build questions on their gitter channel at https://gitter.im/deeplearning4j/deeplearning4j
 + **François Chollet** for keras and also making InceptionV3 models available under MIT license
    + Keras model and weights are extracted from his code at: https://github.com/fchollet/deep-learning-models
  

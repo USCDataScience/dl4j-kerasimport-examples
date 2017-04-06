@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -94,13 +95,22 @@ public class KerasInceptionV3Net {
         String modelFile = "data/inception-model.json";
         String weightsFile = "data/inception-model-weights.h5";
         String classMapFile = "data/imagenet_class_index.json";
-        File imagesDir = new File("data/images");
+
+        File[] images;
+        if (args.length > 0){ // there are CLI args
+            images = Arrays.stream(args).map(File::new).toArray(File[]::new);
+        } else {
+            File imagesDir = new File("data/images");
+            images = imagesDir.listFiles(pathname -> pathname.getName().endsWith(".jpg"));
+        }
+        assert images != null;
+        LOG.debug("Found {} images", images.length);
         KerasInceptionV3Net net = new KerasInceptionV3Net(modelFile, weightsFile);
         try (InputStream is = new FileInputStream(classMapFile)){
             net.loadClassIndex(is);
         }
-        for (String imageFile: imagesDir.list((dir, name) -> name.endsWith(".jpg"))) {
-            INDArray imgData = net.preProcessImage(new File(imagesDir, imageFile).getPath());
+        for (File imageFile: images) {
+            INDArray imgData = net.preProcessImage(imageFile.getPath());
             long st = System.currentTimeMillis();
             List<Label> results = net.classify(imgData);
             long timeTaken = System.currentTimeMillis() -  st;
